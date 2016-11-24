@@ -1,0 +1,14 @@
+{
+  "name": "drupal/xparagraphs_image",
+  "type": "drupal-module",
+  "description": "Image paragraph",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/xparagraphs_image",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/xparagraphs_image",
+    "source": "http://cgit.drupalcode.org/xparagraphs_image"
+  },
+  "require": { }
+}

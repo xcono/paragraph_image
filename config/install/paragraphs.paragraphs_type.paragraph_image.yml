@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - xparagraphs_image
+id: paragraph_image
+label: 'Image Paragraph'

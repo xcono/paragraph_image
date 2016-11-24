@@ -1,0 +1,62 @@
+<?php
+
+/**
+ * @file
+ * Contains paragraph_image_single.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function paragraph_image_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the paragraph_image_single module.
+    case 'help.page.paragraph_image_single':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Image paragraph') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+/**
+ * Implements hook_theme_registry_alter
+ */
+function paragraph_image_theme_registry_alter(&$theme_registry) {
+
+  // register template for paragraph_images entity in module
+  $theme_registry['paragraph__paragraph_image'] = [
+          'path' => drupal_get_path('module', 'paragraph_image') . '/templates/paragraph',
+          'template' => 'paragraph--paragraph-image'
+      ] + $theme_registry['paragraph'];
+}
+
+/**
+ * Implements hook_preprocess_paragraph() for paragraph.html.twig.
+ * @param array $vars
+ */
+function paragraph_image_preprocess_paragraph(array &$vars) {
+
+  $paragraph = $vars['paragraph'];
+  $type = $paragraph->getType();
+
+  if('paragraph_image' == $type) {
+
+    $vars['style'] = 'default';
+
+    // TODO: add styles field to image paragraph
+
+    if('hidden' == $vars['style']) {
+      $vars['content'] = [];
+    }
+
+    // Label
+    $image = $paragraph->get('field_paragraph_image')->first()->getValue();
+    $vars['title'] = $image['title'] ?: $image['alt'];
+  }
+}
