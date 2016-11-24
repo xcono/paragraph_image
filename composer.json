@@ -12,5 +12,7 @@
     "issues": "https://github.com/xcono/paragraph_image/issues",
     "source": "https://github.com/xcono/paragraph_image"
   },
-  "require": { }
+  "require": {
+    "drupal/paragraphs": "~1.0"
+  }
 }
