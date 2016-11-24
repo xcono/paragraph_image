@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - paragraphs.paragraphs_type.paragraph_image
+    - field.storage.paragraphs.field_paragraph_label
 id: paragraph.paragraph_label.field_paragraph_label
 field_name: field_paragraph_label
 entity_type: paragraph
