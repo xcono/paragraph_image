@@ -4,6 +4,9 @@ dependencies:
   module:
     - image
     - paragraphs
+  enforced:
+      module:
+        - paragraph_image
 id: paragraph_image.field_paragraph_image
 field_name: field_paragraph_image
 entity_type: paragraph
