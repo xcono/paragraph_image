@@ -1,14 +1,16 @@
 {
-  "name": "drupal/xparagraphs_image",
+  "version": "1.0.0",
+  "name": "xcono/xparagraphs_image",
   "type": "drupal-module",
   "description": "Image paragraph",
   "keywords": ["Drupal"],
   "license": "GPL-2.0+",
-  "homepage": "https://www.drupal.org/project/xparagraphs_image",
+  "homepage": "https://github.com/xcono/paragraph_image",
   "minimum-stability": "dev",
+  "prefer-stable": true,
   "support": {
-    "issues": "http://drupal.org/project/issues/xparagraphs_image",
-    "source": "http://cgit.drupalcode.org/xparagraphs_image"
+    "issues": "https://github.com/xcono/paragraph_image/issues",
+    "source": "https://github.com/xcono/paragraph_image"
   },
   "require": { }
 }
