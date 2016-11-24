@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "xcono/xparagraphs_image",
+  "name": "xcono/paragraph_image",
   "type": "drupal-module",
   "description": "Image paragraph",
   "keywords": ["Drupal"],
