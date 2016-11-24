@@ -3,9 +3,6 @@ status: true
 dependencies:
   config:
     - paragraphs.paragraphs_type.paragraph_image
-  enforced:
-    module:
-      - xparagraphs_image
 id: paragraph.paragraph_label.field_paragraph_label
 field_name: field_paragraph_label
 entity_type: paragraph
