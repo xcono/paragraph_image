@@ -56,7 +56,11 @@ function paragraph_image_preprocess_paragraph(array &$vars) {
     }
 
     // Label
-    $image = $paragraph->get('field_paragraph_image')->first()->getValue();
-    $vars['title'] = $image['title'] ?: $image['alt'];
+    $imageField = $paragraph->get('field_paragraph_image')->first()
+    if ($imageField) {
+      $image = $imageField->getValue();
+      $vars['title'] = $image['title'] ?: $image['alt'];
+    }
+    
   }
 }
